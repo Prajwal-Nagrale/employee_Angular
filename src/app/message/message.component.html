@@ -1,0 +1,8 @@
+<h2 style="text-align: center;">Message Component</h2>
+<div *ngIf="getMessage()">
+    <ul *ngFor='let message of getMessage()' >
+        <li>{{message}}</li>
+    </ul>
+     <button type="reset" (click)='reset()'>Reset</button>&nbsp;&nbsp;&nbsp;
+     <button (click)='ngOnInit()'>Undo</button>
+</div>

@@ -1,0 +1,22 @@
+<h2>Add employee Details</h2>
+
+<div *ngIf="employee">
+    <div>Id : {{employee.id}}</div>
+    <div>Name : {{employee.name}}</div>
+    <div>Salary : {{employee.salary}}</div>
+</div>
+<br><br>
+<div>
+    <label for="emp-id">Employee Id:</label>
+    <input id="emp-id" placeholder="Id" [(ngModel)]='employee.id'><br>
+
+    <label for="emp-name">Employee Id:</label>
+    <input id="emp-name" placeholder="Name" [(ngModel)]='employee.name'><br>
+
+    <label for="emp-salary">Employee Id:</label>
+    <input id="emp-salary" placeholder="salary" [(ngModel)]='employee.salary'><br>
+
+    <button (click)="submit(employee)" routerLink='/employeeList' routerLinkActive="active">Submit</button>
+
+    <hr><br>
+</div>

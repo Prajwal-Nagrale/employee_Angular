@@ -1,0 +1,26 @@
+
+<div>
+  <table >
+    <h2>Update Employee Details</h2>
+    <caption></caption>
+    <tr>
+      <td><label for="emp-id">Employee ID</label></td>
+      <td>{{employee.id}}</td>
+    </tr>
+    <tr>
+      <td><label for="emp-name">Employee Name</label></td>
+      <td> <input id="emp-name" type="text" placeholder="Changed Name" [(ngModel)]="employee.name"> </td>
+    </tr>
+
+    <tr>
+      <td><label for="emp-sal">Employee Salary</label></td>
+      <td><input id="emp-sal" type="number" placeholder="Changed Salary" [(ngModel)]="employee.salary"></td>
+    </tr>
+
+    <tr>
+      <td>
+        <button type="button" (click)="updateEmp(employee)" routerLink='/employeeList' routerLinkActive="active" navigationDelay="2500">Update</button>
+      </td>
+    </tr>
+  </table>
+</div>

@@ -1,0 +1,30 @@
+<table border="1" align="center">
+    <tr>
+        <th>Employee id </th>
+        <th>Employee Name </th>
+        <th>Employee Salary </th>
+    </tr>
+    <tr *ngFor="let emp of employee" (click)="onSelect(emp)" routerLink='/employeeDetails/{{emp.id}}' routerLinkActive="active">
+        <td>{{emp.id}}</td>
+        <td>{{emp.name}}</td>
+        <td>{{emp.salary}}</td>
+    </tr>
+</table><br><br>
+Do you want to add Employee ?
+    <button routerLink='/addEmployee' routerLinkActive="active">Click Here..</button>
+<hr>
+<!-- <div id="op"*ngIf="selectedEmployee" align="center">
+    Selected Employee is {{selectedEmployee.name}}
+</div > -->
+
+<!-- <app-employee-details [employee]="selectedEmployee"></app-employee-details> -->
+
+<style>
+    th{
+        background-color: blue;
+        color: cornsilk;
+    }
+    table{
+        background-color:lightcyan;
+    }
+</style>

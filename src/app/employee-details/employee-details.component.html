@@ -1,0 +1,14 @@
+<div *ngIf="employee"> 
+    <h2>Employee Details</h2>
+    Employee Id :{{employee.id}}<br>
+    Name :{{employee.name}}<br>
+    Salary :{{employee.salary}}<br><br>
+    <button routerLink='/employeeList' routerLinkActive="active">Back</button>&nbsp;&nbsp;&nbsp;&nbsp;
+    <button (click)="deleteEmployee()" routerLink='/employeeList' routerLinkActive="active">Delete Employee</button>&nbsp;&nbsp;&nbsp;&nbsp;
+    <button  routerLink='/updateList/{{employee.id}}' routerLinkActive="active">Update Employee</button>
+    <hr><br>
+    
+</div>
+
+
+
